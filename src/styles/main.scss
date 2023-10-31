@@ -1,0 +1,95 @@
+$b-default-radius: 16px;
+$bg-color: #F5F5F5;
+$d-fill: #FFF;
+$color: #1F1F1F;
+
+$font-default: 18px;
+
+$d-but-radius: 6px;
+
+@font-face {
+  font-family: 'Scanno-Heavy';
+  src: url('../fonts/Scanno-Heavy.ttf') format('ttf');
+}
+
+.bold {
+  font-weight: bolder;
+}
+
+h3 {
+  font-weight: bold;
+  font-size: 24px;
+}
+
+button {
+  border: none;
+  &:hover {
+    cursor: pointer;
+  }
+}
+.datepicker {
+  font-family: 'Scanno-Heavy', sans-serif;
+  border-radius: $b-default-radius;
+  padding: 24px;
+  background: $bg-color;
+  width: 426px;
+  height: 396px;
+  .content {
+
+    .picker-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      .picker-choose-date {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 4px;
+        .pickerJS-month, .pickerJS-year {
+          transition: all .3s ease;
+          &:hover {
+            background: #0047FF;
+            color: #fff;
+            cursor: pointer;
+          }
+          &.js-picker-element-selected {
+            background: #0047FF;
+            color: #fff;
+          }
+        }
+      }
+    }
+
+    .picker-main {
+      margin-top: 12px;
+      .calendar {
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+        gap: 2px;
+        text-align: center;
+        color:$color;
+        font-size: $font-default;
+        .day {
+          padding: 13px 11px;
+          font-weight: bold;
+          border-radius: $d-but-radius;
+          &.current-month {
+            background: $d-fill;
+          }
+        }
+        .day-of-week {
+          font-weight: bolder;
+        }
+      }
+    }
+
+
+
+  }
+  .picker-btn {
+    padding: 10px 12px;
+    border-radius: $d-but-radius;
+    background: $d-fill;
+    box-shadow: 0 1px 1px 0 #000E3305;
+  }
+}
