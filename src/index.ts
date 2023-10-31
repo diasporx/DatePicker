@@ -1,7 +1,7 @@
 /// <reference path="./types/types.d.ts" />
 import "./styles/main.scss";
 import { DatePicker } from './components/datepicker';
-import {Months} from "./components/months";
+import {isLeapYear, Months} from "./components/months";
 
 let myDatePicker:DatePicker;
 const initializeDatepicker = ():void => {
@@ -55,6 +55,7 @@ document.addEventListener('DOMContentLoaded', ():void => {
         if (h3Element) {
             let thisYear: number | null = Number(h3Element.textContent);
             thisYear += increment;
+            isLeapYear(thisYear) ? Months['February'] = 29 : Months['February'] = 28;
             h3Element.textContent = String(thisYear);
         }
     };

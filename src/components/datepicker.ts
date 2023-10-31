@@ -84,14 +84,4 @@ export class DatePicker {
     public render(parentElement: HTMLElement): void {
         parentElement.appendChild(this.datePicker);
     }
-
-    public goToNext = (type: string): void => {
-        // Логика обновления данных при нажатии кнопки вперед
-        // ...
-    }
-
-    public goToPrevious = (type: string): void => {
-        // Логика обновления данных при нажатии кнопки назад
-        // ...
-    }
 }
