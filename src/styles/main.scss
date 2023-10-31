@@ -70,6 +70,14 @@ button {
         color:$color;
         font-size: $font-default;
         .day {
+          &.prev-month, &.next-month {
+            color: #00175415;
+          }
+        }
+        .day-of-week {
+          margin-bottom: 12px;
+        }
+        .day {
           padding: 13px 11px;
           font-weight: bold;
           border-radius: $d-but-radius;
